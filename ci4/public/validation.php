@@ -132,6 +132,99 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
 ?>
 </div>
+    <title>Website deisgn using HTML And CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="images2/dmauricio.png">
+            </div>
+            <div class="nav-links">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Spike</a></li>
+                  <li><a href="#">About me</a></li>
+                  <li><a href="#">Contact info</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="images2/spike.png" class="mobile">
+            <div id="circle">
+                <div class="feature one">
+                    <div>
+                      <h1>Introduction</h1>
+                      <p>Hello there, it's a pleasure to meet you! My name is Juan Daniel A. Mauricio and</p>
+                      <p>I'm a computer science student who is currently studying at Asia Pacific College. At </p>
+                      <p>the moment, I am in my second year of studies. Apart from being interested in the</p>
+                      <p>field of technology, I also have a passion for gaming and love to catch up on my </p>
+                      <p>sleep whenever I can.</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <div>
+                      <h1>Contact Info</h1>
+                      <p>Email: jamauricio@student.apc.edu.ph </p>
+                      <p>Mobile Number: 0945 329 3989</p>
+                      <p>Discord: danielllll#6676</p>  
+                    </div>
+                </div>
+                <div class="feature three">
+                    <div>
+                      <h1>Values and Philosophy</h1>
+                      <p>an individual has a strong work ethic and enjoys the process of achieving their </p>
+                      <p>goals. They value hard work, dedication, and efficiency in their work, but also </p>
+                      <p>prioritize taking breaks to rest and recharge. They believe in finding a balance</p>
+                      <p>between school and rest for a healthy lifestyle.</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <div>
+                      <h1>Hobbies</h1>
+                      <p>I love spending my free time doing things I enjoy, One of my favorite hobbies is playing fetch with my Golden Retriever,
+                      I'm also an avid gamer and love playing popular titles like Valorant, CSGO, and Overwatch.
+                      Lastly, I prioritize working out whenever I can to stay healthy. Taking care of my body is important to me
+                      and I love feeling good after a good workout session. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <img src="images2/arrow.png" id="upBtn">
+            <h3>Features</h3>
+            <img src="images2/arrow.png" id="downBtn">
+        </div>
+
+    </div>
+
+
+    <script>
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("upBtn");
+        var downBtn = document.getElementById("downBtn");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+
+        upBtn.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(-90deg)"
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        downBtn.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(+90deg)"
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
 
 
 </body>
